@@ -55,9 +55,14 @@ function operacaoDv() {
 }
 
 function primeiroNumero(){
+    console.log('Analise dos números:')
     var expressao = window.document.getElementById('expressao');
     expressao = expressao.innerText
     for(var i=0;i<expressao.length;i++){
-        //if(typeof(Number(expressao.at(i))))
+        if(expressao.at(i)!='+' && expressao.at(i)!='-' && expressao.at(i)!='x' && expressao.at(i)!='÷'){
+            console.log(`Não há simbolos em ${i}. Valor =${expressao.at(i)}`)
+        } else{
+            console.log(`Há símbolos em ${i}! Valor=${expressao.at(i)}`)
+        }
     }
 }
