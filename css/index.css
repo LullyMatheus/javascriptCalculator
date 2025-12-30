@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(75, 0, 122);
+}
+
+.div-op{
+    padding: 2%;
+}
+
+
+.fonte-nabla{
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+}
+
+.header {
+    font: bold 25pt Courier;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.minhaDiv {
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    font: normal 15pt Unageo;
+    padding: 3%;
+    /* usar o padding aqui eh melhor do que heigth e width*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
+    width: 400px;
+
+}
+
+.footer {
+    font: normal 10pt Unageo;
+    text-align: center;
+    color: white;
+}
