@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
+
 <body>
 
     <header class="header">
-        <h1>Que horas são?</h1>
+        <h1 class="fonte-nabla">Javascript Calculator</h1>
     </header>
     <section class="section">
         <div class="minhaDiv">
-            <p>Minha Div</p>
-            <br>
-            <p>Minha Div</p>
+
+            <div class="div-op">
+                <label for="op1">Operando 1</label>
+                <input type="number" id="op1">
+            </div>
+
+            <div class="div-op">
+                <label for="op2">Operando 2</label>
+                <input type="number" id="op2">
+            </div>
+
+            <label>Operação</label>
+            <input type="button" value="+" id="btn+" onclick="operacaoMais()">
+            <input type="button" value="-" id="btn-" onclick="operacaoMenos()">
+            <input type="button" value="×" id="btnmt" onclick="operacaoMt()">
+            <input type="button" value="÷" id="btndv" onclick="operacaoDv()">
+
+            <p id="op">---</p>
 
         </div>
     </section>
@@ -24,6 +44,9 @@
     <footer class="footer">
         <p>&copy;matheusmechetti</p>
     </footer>
-    
+
+    <script src="javascript/index.js"></script>
+
 </body>
+
 </html>
