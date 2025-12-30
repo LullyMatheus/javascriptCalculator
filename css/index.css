@@ -6,6 +6,29 @@ body {
     padding: 2%;
 }
 
+#conta{
+    background-color: rgb(202, 224, 169);
+    min-height: 80px;
+    border-radius: 10px;
+    border: 2px solid #0000004b
+}
+
+.numeros{
+    text-align: center;
+    padding: 2%;
+    margin-top: 5px;
+}
+
+.btn{
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+}
+
+.operacao{
+    margin-top: 15px;
+    text-align: center;
+}
 
 .fonte-nabla{
   font-family: "Nabla", system-ui;
