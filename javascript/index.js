@@ -1,6 +1,8 @@
 //window.alert('Estou funcionando')
 var operacao=0;
 
+/*Usar typeof(var) para separar numeros de simbolos */
+
 function operacaoMais(){
     var op = window.document.getElementById('op');
     operacao = 1;
