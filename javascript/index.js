@@ -1,7 +1,16 @@
 //window.alert('Estou funcionando')
 var operacao=0;
 
-/*Usar typeof(var) para separar numeros de simbolos */
+/*Usar typeof(var) para separar numeros de simbolos 
+> var nome ='matheus'
+undefined
+> nome
+'matheus'
+> var letra = nome.at(2)
+undefined
+> letra
+'t'
+*/
 
 function operacaoMais(){
     var op = window.document.getElementById('op');
