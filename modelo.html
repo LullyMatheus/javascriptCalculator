@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body>
+<body onload="desativarBotoes()">
 
     <header class="header">
         <h1 class="fonte-nabla">Javascript Calculator</h1>
@@ -25,11 +25,11 @@
             
 
             <div class="operacao">
-                <input class="btn" type="button" value="+" id="btn+" onclick="operacaoMais()">
-                <input class="btn" type="button" value="-" id="btn-" onclick="operacaoMenos()">
-                <input class="btn" type="button" value="x" id="btnmt" onclick="operacaoMt()">
-                <input class="btn" type="button" value="÷" id="btndv" onclick="operacaoDv()">
-                <input class="btn" type="button" value="AC" id="zerar" onclick="zerar()">
+                <input class="btn" name="btnOp" type="button" value="+" id="btn+" onclick="operacaoMais()">
+                <input class="btn" name="btnOp" type="button" value="-" id="btn-" onclick="operacaoMenos()">
+                <input class="btn" name="btnOp" type="button" value="x" id="btnmt" onclick="operacaoMt()">
+                <input class="btn" name="btnOp" type="button" value="÷" id="btndv" onclick="operacaoDv()">
+                <input class="btn" name="btnOp" type="button" value="AC" id="zerar" onclick="zerar()">
                 <br>
                 
                 
@@ -50,7 +50,7 @@
                 <br>
             </div>
 
-            <input type="button" value="testar" onclick="primeiroNumero()">
+            <input type="button" value="testar" onclick="indiceSinal()">
 
         </div>
     </section>
