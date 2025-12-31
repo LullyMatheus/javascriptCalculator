@@ -3,6 +3,11 @@ const btn2 = window.document.getElementsByName('btnOp')[1];
 const btn3 = window.document.getElementsByName('btnOp')[2];
 const btn4 = window.document.getElementsByName('btnOp')[3];
 
+let resultadoPrevio = false;
+let resultadoGlobal = 0;
+let telaResultado = false; //para saber se ela esta na tela que exibe resposta
+let indiceAns=3;
+
 function desativarBotoes() {
     btn1.disabled = true;
     btn2.disabled = true;
@@ -22,20 +27,20 @@ function operacao(a) {
     escreverNaTela(a)
 }
 
-function operar(a,b,sinal){
+function operar(a, b, sinal) {
     let resultado;
-        switch(sinal){
+    switch (sinal) {
         case '+':
-            resultado=a+b;
+            resultado = a + b;
             break;
         case '-':
-            resultado=a-b;
+            resultado = a - b;
             break;
         case 'x':
-            resultado=a*b;
+            resultado = a * b;
             break;
         case '÷':
-            resultado=a/b;
+            resultado = a / b;
             break;
         default:
             window.alert('Houve um erro. Tente Novamente')
@@ -47,8 +52,24 @@ function operar(a,b,sinal){
 function escreverNaTela(a) {
     let expressao = window.document.getElementById('expressao');
     let tamanho = (expressao.innerText).length
+    let obs = window.document.getElementById('obs')
     if (tamanho == 0) {
         ativarBotoes();
+    }
+    
+    if (telaResultado==true){
+        let res = window.document.getElementById('res')
+        expressao.innerText='';
+        res.innerText='';
+        let char = a
+
+        if (['+', '-', 'x', '÷'].includes(char)){
+            expressao.innerText = 'ANS '
+        } else{
+            resultadoPrevio=false;
+            obs.innerText='';
+        }
+        telaResultado=false;        
     }
     expressao.innerText += a
 }
@@ -58,53 +79,81 @@ function zerar() {
     expressao.innerText = ''
     desativarBotoes();
     let res = window.document.getElementById('res');
-    res.innerText=''
+    res.innerText = ''
+    resultadoPrevio = false;
+    resultadoGlobal = 0;
 }
 
 function calcular() {
 
-    let primeiroNumero = '';
-    let segundoNumero = '';
-    let indiceSinal = '';
-    console.log('Analise dos números:')
-    let expressao = window.document.getElementById('expressao');
-    expressao = expressao.innerText
+    if (resultadoPrevio == false) {
+        let primeiroNumero = '';
+        let segundoNumero = '';
+        let indiceSinal = '';
 
-    for (let i = 0; i < expressao.length; i++) {
-        let char = expressao.at(i);
-        if (!['+', '-', 'x', '÷'].includes(char)) {
-            primeiroNumero += expressao.at(i);
-        } else {
-            console.log(`Há símbolos em ${i}! Valor = '${expressao.at(i)}'`)
-            indiceSinal = i;
-            break;
+        console.log('Analise dos números:')
+
+        let expressao = window.document.getElementById('expressao');
+        expressao = expressao.innerText
+
+        for (let i = 0; i < expressao.length; i++) {
+            let char = expressao.at(i);
+            if (!['+', '-', 'x', '÷'].includes(char)) {
+                primeiroNumero += expressao.at(i);
+            } else {
+                console.log(`Há símbolos em ${i}! Valor = '${expressao.at(i)}'`)
+                indiceSinal = i;
+                break;
+            }
         }
+
+        primeiroNumero = Number(primeiroNumero)
+        console.log('O primeiro número é: ' + primeiroNumero)
+        indiceSinal = Number(indiceSinal)
+
+        for (let j = indiceSinal + 1; j < expressao.length; j++) {
+            segundoNumero += expressao.at(j);
+        }
+
+        segundoNumero = Number(segundoNumero)
+        console.log('O segundo numero é ' + segundoNumero)
+
+        let resultado = operar(primeiroNumero, segundoNumero, expressao.at(indiceSinal))
+
+        console.log(resultado)
+        let res = window.document.getElementById('res')
+        res.innerText = (`R:${resultado}`)
+        resultadoPrevio = true;
+        resultadoGlobal += resultado;
+        ativarBotoes();
+        telaResultado=true;
+
+    } else {
+        let expressao = window.document.getElementById('expressao');
+        expressao = expressao.innerText
+
+        let primeiroNumero=resultadoGlobal;
+        let segundoNumero='';
+
+        for (let i = 4; i < expressao.length; i++) {
+            segundoNumero += expressao.at(i);
+        }
+
+        segundoNumero = Number(segundoNumero)
+        console.log('O novo número é: ' + segundoNumero)
+
+        let resultado = operar(primeiroNumero, segundoNumero, expressao.at(indiceAns))
+
+        console.log(resultado)
+        let res = window.document.getElementById('res')
+        res.innerText = (`R:${resultado}`)
+        resultadoPrevio = true;
+        resultadoGlobal = resultado;
+        ativarBotoes();
+        telaResultado=true;
+        
     }
 
-    primeiroNumero = Number(primeiroNumero)
-    console.log('O primeiro número é: ' + primeiroNumero)
-    indiceSinal = Number(indiceSinal)
 
-    for (let j = indiceSinal+1; j < expressao.length; j++) {
-        segundoNumero += expressao.at(j);
-    }
-
-    segundoNumero = Number(segundoNumero)
-    console.log('O segundo numero é ' + segundoNumero)
-
-    let resultado=operar(primeiroNumero,segundoNumero,expressao.at(indiceSinal))
-
-    console.log(resultado)
-    var res = window.document.getElementById('res')
-    res.innerText=(`R:${resultado}`)
 
 }
-
-/*
-Para fazer várias contas na mesma expressao
-a logica seria assim
-crie uma variavel booleana para o simbolo
-se ja tiver ao menos um simbolo, fica true
-se o usuario digitar outro simbolo, ele finaliza a conta anterior
-e usa o resultado da conta anterior para realizar a proxima operacao
-*/
