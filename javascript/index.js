@@ -145,3 +145,12 @@ function calcular() {
     res.innerText=(`R:${resultado}`)
 
 }
+
+/*
+Para fazer várias contas na mesma expressao
+a logica seria assim
+crie uma variavel booleana para o simbolo
+se ja tiver ao menos um simbolo, fica true
+se o usuario digitar outro simbolo, ele finaliza a conta anterior
+e usa o resultado da conta anterior para realizar a proxima operacao
+*/
