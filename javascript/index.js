@@ -3,6 +3,8 @@ const btn2 = window.document.getElementsByName('btnOp')[1];
 const btn3 = window.document.getElementsByName('btnOp')[2];
 const btn4 = window.document.getElementsByName('btnOp')[3];
 
+const obs = window.document.getElementById('obs')
+
 let resultadoPrevio = false;
 let resultadoGlobal = 0;
 let telaResultado = false; //para saber se ela esta na tela que exibe resposta
@@ -77,11 +79,12 @@ function escreverNaTela(a) {
 function zerar() {
     let expressao = window.document.getElementById('expressao');
     expressao.innerText = ''
-    desativarBotoes();
+    telaResultado=false;
     let res = window.document.getElementById('res');
     res.innerText = ''
     resultadoPrevio = false;
     resultadoGlobal = 0;
+    desativarBotoes();
 }
 
 function calcular() {
@@ -153,7 +156,4 @@ function calcular() {
         telaResultado=true;
         
     }
-
-
-
 }
