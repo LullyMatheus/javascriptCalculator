@@ -119,7 +119,7 @@ function calcular() {
 
         let resultado = operar(primeiroNumero, segundoNumero, expressao.at(indiceSinal))
 
-        console.log(resultado)
+        console.log('Resultado: '+resultado)
         let res = window.document.getElementById('res')
         res.innerText = (`R: ${resultado}`)
         resultadoPrevio = true;
@@ -140,10 +140,11 @@ function calcular() {
 
         segundoNumero = Number(segundoNumero)
         console.log('O novo número é: ' + segundoNumero)
+        console.log('Símbolo: '+expressao.at(indiceAns))
 
         let resultado = operar(primeiroNumero, segundoNumero, expressao.at(indiceAns))
 
-        console.log(resultado)
+        console.log('Resultado: '+resultado)
         let res = window.document.getElementById('res')
         res.innerText = (`R: ${resultado}`)
         resultadoPrevio = true;
