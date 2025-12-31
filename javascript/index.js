@@ -1,5 +1,3 @@
-//window.alert('Estou funcionando')
-var operacao = 0;
 
 /*Usar typeof(var) para separar numeros de simbolos 
 > var nome ='matheus'
@@ -31,6 +29,22 @@ function ativarBotoes() {
     btn4.disabled = false;
 }
 
+function somar(a,b){
+    return a+b
+}
+
+function subtrair(a,b){
+    return a-b
+}
+
+function multiplicar(a,b){
+    return a*b
+}
+
+function dividir(a,b){
+    return a/b
+}
+
 function testar() {
     var expressao = window.document.getElementById('expressao');
     expressao = expressao.innerText
@@ -45,7 +59,7 @@ function testar() {
 function escreverNaTela(a) {
     var expressao = window.document.getElementById('expressao');
     var tamanho = (expressao.innerText).length
-    if(tamanho==0){
+    if (tamanho == 0) {
         ativarBotoes();
     }
     expressao.innerText += a
@@ -55,51 +69,79 @@ function zerar() {
     var expressao = window.document.getElementById('expressao');
     expressao.innerText = ''
     desativarBotoes();
+    var res = window.document.getElementById('res');
+    res.innerText=''
 }
 
 function operacaoMais() {
     desativarBotoes()
-    var operacao = 1;
     escreverNaTela('+')
 }
 
 function operacaoMenos() {
     desativarBotoes()
-    var operacao = 2;
     escreverNaTela('-')
 }
 
 function operacaoMt() {
     desativarBotoes()
-    var operacao = 3;
     escreverNaTela('x')
 }
 
 function operacaoDv() {
     desativarBotoes()
-    var operacao = 4;
     escreverNaTela('÷')
 }
 
-function indiceSinal() {
-    var primeiroNumero=0;
-    var indiceSinal=0;
+function calcular() {
+    var primeiroNumero = 0;
+    var segundoNumero = 0;
+    var indiceSinal = 0;
     console.log('Analise dos números:')
     var expressao = window.document.getElementById('expressao');
     expressao = expressao.innerText
     for (var i = 0; i < expressao.length; i++) {
         if (expressao.at(i) != '+' && expressao.at(i) != '-' && expressao.at(i) != 'x' && expressao.at(i) != '÷') {
-            primeiroNumero+=expressao.at(i);
+            primeiroNumero += expressao.at(i);
         } else {
             console.log(`Há símbolos em ${i}! Valor=${expressao.at(i)}`)
-            indiceSinal=i;
+            indiceSinal = i;
             break;
         }
     }
 
-    primeiroNumero=Number(primeiroNumero)
-    console.log('O primeiro número é: '+primeiroNumero)
-    console.log('O indice do sinal é '+indiceSinal)
-    
-    return indiceSinal;
+    primeiroNumero = Number(primeiroNumero)
+    console.log('O primeiro número é: ' + primeiroNumero)
+    indiceSinal = Number(indiceSinal)
+
+    for (var j = indiceSinal+1; j < expressao.length; j++) {
+        segundoNumero += expressao.at(j);
+    }
+    segundoNumero = Number(segundoNumero)
+    console.log('O segundo numero é ' + segundoNumero)
+
+    var resultado;
+
+    switch(expressao.at(indiceSinal)){
+        case '+':
+            resultado=somar(primeiroNumero,segundoNumero)
+            break;
+        case '-':
+            resultado=subtrair(primeiroNumero,segundoNumero)
+            break;
+        case 'x':
+            resultado=multiplicar(primeiroNumero,segundoNumero)
+            break;
+        case '÷':
+            resultado=dividir(primeiroNumero,segundoNumero)
+            break;
+        default:
+            window.alert('Houve um erro. Tente Novamente')
+            break;
+    }
+
+    console.log(resultado)
+    var res = window.document.getElementById('res')
+    res.innerText=(`R:${resultado}`)
+
 }
