@@ -122,7 +122,7 @@ function calcular() {
 
         console.log(resultado)
         let res = window.document.getElementById('res')
-        res.innerText = (`R:${resultado}`)
+        res.innerText = (`R: ${resultado}`)
         resultadoPrevio = true;
         resultadoGlobal += resultado;
         ativarBotoes();
@@ -146,7 +146,7 @@ function calcular() {
 
         console.log(resultado)
         let res = window.document.getElementById('res')
-        res.innerText = (`R:${resultado}`)
+        res.innerText = (`R: ${resultado}`)
         resultadoPrevio = true;
         resultadoGlobal = resultado;
         ativarBotoes();
