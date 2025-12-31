@@ -1,0 +1,10 @@
+##O que não fazer:
+❌ 1. Usar var para variáveis;
+❌ 2. Usar <input type="button"> para criar botões
+❌ 3. Usar onclick="" dentro de uma tag html
+
+
+##No lugar disso, fazer:
+✅ 1. Usar let e const para variáveis
+✅ 2. Usar a tag <button>
+✅ 3. Usar EventListener (separar responsabilidades)
