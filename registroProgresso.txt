@@ -1,0 +1,8 @@
+//Fiz uma primeira versão da calculadora. É muito básica, mas já funciona.
+
+/*
+Funcionalidades para adicionar
+- Não permitir a divisão por zero;
+- Permitir que o usuário realize várias contas em sequência;
+- Após calcular, permitir digitar um novo numero
+*/
