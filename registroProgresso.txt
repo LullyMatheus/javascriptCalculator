@@ -6,6 +6,7 @@ Funcionalidades para adicionar
 - Permitir que o usuário realize várias contas em sequência ✅;
 - Após calcular, permitir digitar um novo numero ✅;
 - Permitir que o usuário digite com seu teclado;
+- Permitir que o usuário apague apenas o último valor que digitou;
 */
 
 /*
