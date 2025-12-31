@@ -9,7 +9,7 @@ body {
 #conta{
     background-color: rgb(202, 224, 169);
     font: normal 10pt Roboto;
-    min-height: 100px;
+    min-height: 80px;
     border-radius: 10px;
     border: 2px solid #0000004b
 }
@@ -65,7 +65,7 @@ body {
     padding: 3%;
     /* usar o padding aqui eh melhor do que heigth e width*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
-    width: 400px;
+   
 
 }
 
