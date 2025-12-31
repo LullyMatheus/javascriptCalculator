@@ -3,8 +3,6 @@ const btn2 = window.document.getElementsByName('btnOp')[1];
 const btn3 = window.document.getElementsByName('btnOp')[2];
 const btn4 = window.document.getElementsByName('btnOp')[3];
 
-const obs = window.document.getElementById('obs')
-
 let resultadoPrevio = false;
 let resultadoGlobal = 0;
 let telaResultado = false; //para saber se ela esta na tela que exibe resposta
@@ -54,7 +52,6 @@ function operar(a, b, sinal) {
 function escreverNaTela(a) {
     let expressao = window.document.getElementById('expressao');
     let tamanho = (expressao.innerText).length
-    let obs = window.document.getElementById('obs')
     if (tamanho == 0) {
         ativarBotoes();
     }
@@ -69,7 +66,6 @@ function escreverNaTela(a) {
             expressao.innerText = 'ANS '
         } else{
             resultadoPrevio=false;
-            obs.innerText='';
         }
         telaResultado=false;        
     }
