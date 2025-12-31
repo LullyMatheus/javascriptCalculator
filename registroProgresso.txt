@@ -3,6 +3,15 @@
 /*
 Funcionalidades para adicionar
 - Não permitir a divisão por zero;
-- Permitir que o usuário realize várias contas em sequência;
-- Após calcular, permitir digitar um novo numero
+- Permitir que o usuário realize várias contas em sequência ✅;
+- Após calcular, permitir digitar um novo numero ✅;
+- Permitir que o usuário digite com seu teclado;
+*/
+
+/*
+Aparencia
+- Fonte pixelada
+- Personalizar botoes
+- Adicionar mais graça no fundo
+- Adicionar favicon (js)
 */
