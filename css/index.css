@@ -6,6 +6,11 @@ body {
     padding: 2%;
 }
 
+#obs{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
 #conta{
     background-color: rgb(202, 224, 169);
     font: normal 10pt Roboto;
@@ -20,7 +25,12 @@ body {
     margin-top: 5px;
 }
 
+abbr{
+    text-decoration: none;
+}
+
 .btn{
+    text-decoration: none;
     height: 30px;
     width: 35px;
     margin: 2px;
