@@ -16,13 +16,13 @@
     <header class="header">
         <h1 class="fonte-nabla">Javascript Calculator</h1>
     </header>
+
     <section class="section">
         <div class="minhaDiv">
 
             <div id="conta">
                 <p id="expressao"></p>
                 <p id="res"></p>
-                <p id="obs"></p>
             </div>
             
 
@@ -31,7 +31,7 @@
                 <input class="btn" name="btnOp" type="button" value="-" id="btn-" onclick="operacao('-')">
                 <input class="btn" name="btnOp" type="button" value="x" id="btnmt" onclick="operacao('x')">
                 <input class="btn" name="btnOp" type="button" value="÷" id="btndv" onclick="operacao('÷')">
-                <input class="btn" name="btnOp" type="button" value="AC" id="zerar" onclick="zerar()">
+                <button class="btn" id="zerar" onclick="zerar()"><abbr title="Limpar terminal">AC</abbr></button>
                 <br>
                 
                 
@@ -50,9 +50,12 @@
                 <input class="btn" type="button" value="8" onclick="escreverNaTela(8)">
                 <input class="btn" type="button" value="9" onclick="escreverNaTela(9)">
                 <br>
+                <input class="btn" type="button" value="0" onclick="escreverNaTela(0)">
             </div>
 
-            <input type="button" value="calcular" onclick="calcular()">
+            <button onclick="calcular()"><abbr title="Exibe o Resultado">Calcular</abbr></button>
+
+            
 
         </div>
     </section>
