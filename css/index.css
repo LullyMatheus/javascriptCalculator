@@ -2,16 +2,16 @@ body {
     background-color: rgb(75, 0, 122);
 }
 
-.div-op{
+.div-op {
     padding: 2%;
 }
 
-#obs{
+#obs {
     text-align: center;
     color: rgb(255, 255, 255);
 }
 
-#conta{
+#conta {
     background-color: rgb(202, 224, 169);
     font: normal 10pt Roboto;
     min-height: 90px;
@@ -20,49 +20,60 @@ body {
     margin-bottom: 0;
 }
 
-.numeros{
+.numeros {
     text-align: center;
     padding: 2%;
     margin-top: 5px;
 }
 
-abbr{
+abbr {
     text-decoration: none;
 }
 
-.btn{
+.btn {
     text-decoration: none;
     height: 30px;
     width: 35px;
     margin: 2px;
 }
 
-.operacao{
+.operacao {
     margin-top: 15px;
     text-align: center;
 }
 
-.fonte-nabla{
-  font-family: "Nabla", system-ui;
+.fonte-nabla {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "EDPT" 100,
+        "EHLT" 12;
+}
+
+#expressao {
+    margin-top: 18px;
+}
+
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "EDPT" 100,
-    "EHLT" 12;
+  margin-bottom: 8px;
 }
 
-#expressao{
-    margin-top: 10px;
-}
 
 .micro-5-regular {
-  font-family: "Micro 5", sans-serif;
-  font-weight: 400;
-  font-size:xx-large;
-  font-style: normal;
-  margin-bottom: 0;
-  margin-top: 5px;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    color: rgb(49, 49, 49);
+    font-size: xx-large;
+    font-style: normal;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .header {
@@ -89,7 +100,7 @@ abbr{
     padding: 3%;
     /* usar o padding aqui eh melhor do que heigth e width*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
-   
+
 
 }
 
