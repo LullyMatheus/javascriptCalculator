@@ -6,12 +6,13 @@ Funcionalidades para adicionar
 - Permitir que o usuário realize várias contas em sequência ✅;
 - Após calcular, permitir digitar um novo numero ✅;
 - Permitir que o usuário digite com seu teclado;
-- Permitir que o usuário apague apenas o último valor que digitou;
+- Permitir que o usuário apague apenas o último valor que digitou; ✅
+- Permitir que o usuário use o backspace na tela de resultado;
 */
 
 /*
 Aparencia
-- Fonte pixelada
+- Fonte da tela ✅
 - Personalizar botoes
 - Adicionar mais graça no fundo
 - Adicionar favicon (js)
