@@ -8,24 +8,38 @@ let resultadoGlobal = 0;
 let telaResultado = false; //para saber se ela esta na tela que exibe resposta
 let indiceAns=3;
 let vetorExpressao=[]
+let ultimoIndiceGeral;
 
-function backspace(vetor){ //essa function escreve na tela o conteudo do vetor expressao
+function backspace(){ //essa function escreve na tela o conteudo do vetor expressao
     console.log('Backspace...')
-    vetor = vetorExpressao;
     let expressao = window.document.getElementById('expressao');
-    expressao.innerText='';
-    let char = vetor[length-1]
-    char=toString(char)
-    console.log('O ultimo item é '+char)
 
-    if(['+','-','x','÷'].includes(char)){
+    /*
+    Eu tinha cometido um erro de escrever:
+    expressao=expressao.innerText
+    Isso eh um erro, pois assim a variavel 'expressao' perde a referencia do DOM
+    E assim, ao atribuir valor para 'variavel', esse valor nao ia aparecer no html
+    Pois eu estaria apenas alterando um valor string chamado expressao
+    Esse valor nao esta visivel em lugar nenhum
+    */
+
+    let char = expressao.innerText.at(ultimoIndiceGeral);
+    
+    if(['+', '-', 'x', '÷'].includes(char)){
         ativarBotoes();
     }
+        
+    console.log('O ultimo item é '+char)
+    
+    vetorExpressao.pop();
 
-    vetor.pop();
-    for(let i=0;i<vetor.length;i++){
-        expressao.innerText+=vetor[i]
+    expressao.innerText='' //limpa todo texto da expressao
+
+    for(let i=0;i<vetorExpressao.length;i++){ 
+        //escreve a expressao armazenada em vetorExpressao apos o pop()
+        expressao.innerText+=vetorExpressao[i]
     }
+    ultimoIndiceGeral--;
 }
 
 function desativarBotoes() {
@@ -89,10 +103,12 @@ function escreverNaTela(a) {
         }
         telaResultado=false;        
     }
+
     expressao.innerText += a
     vetorExpressao.push(a)
     console.log(vetorExpressao)
     console.log(`O último indice é: ${vetorExpressao.length-1}`)
+    ultimoIndiceGeral=vetorExpressao.length-1;
 }
 
 function zerar() {
