@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -21,16 +22,16 @@
         <div class="minhaDiv">
 
             <div id="conta">
-                <p id="expressao"></p>
-                <p id="res"></p>
+                <p id="expressao" class="micro-5-regular"></p>
+                <p id="res" class="micro-5-regular"></p>
             </div>
             
 
             <div class="operacao">
-                <input class="btn" name="btnOp" type="button" value="+" id="btn+" onclick="operacao('+')">
-                <input class="btn" name="btnOp" type="button" value="-" id="btn-" onclick="operacao('-')">
-                <input class="btn" name="btnOp" type="button" value="x" id="btnmt" onclick="operacao('x')">
-                <input class="btn" name="btnOp" type="button" value="÷" id="btndv" onclick="operacao('÷')">
+                <button class="btn" name="btnOp" id="btn+" onclick="operacao('+')">+</button>
+                <button class="btn" name="btnOp" id="btn-" onclick="operacao('-')">-</button>
+                <button class="btn" name="btnOp" id="btnmt" onclick="operacao('x')">x</button>
+                <button class="btn" name="btnOp" id="btndv" onclick="operacao('÷')">÷</button>
                 <button class="btn" onclick="backspace()" >&#128281;</button>
                 <button class="btn" id="zerar" onclick="zerar()"><abbr title="Limpar terminal">AC</abbr></button>
                 <br>
@@ -39,19 +40,19 @@
             </div>
 
             <div class="numeros">
-                <input class="btn" type="button" value="1" onclick="escreverNaTela(1)">
-                <input class="btn" type="button" value="2" onclick="escreverNaTela(2)">
-                <input class="btn" type="button" value="3" onclick="escreverNaTela(3)">
+                <button class="btn" onclick="escreverNaTela(1)">1</button>
+                <button class="btn" onclick="escreverNaTela(2)">2</button>
+                <button class="btn" onclick="escreverNaTela(3)">3</button>
                 <br>
-                <input class="btn" type="button" value="4" onclick="escreverNaTela(4)">
-                <input class="btn" type="button" value="5" onclick="escreverNaTela(5)">
-                <input class="btn" type="button" value="6" onclick="escreverNaTela(6)">
+                <button class="btn" onclick="escreverNaTela(4)">4</button>
+                <button class="btn" onclick="escreverNaTela(5)">5</button>
+                <button class="btn" onclick="escreverNaTela(6)">6</button>
                 <br>
-                <input class="btn" type="button" value="7" onclick="escreverNaTela(7)">
-                <input class="btn" type="button" value="8" onclick="escreverNaTela(8)">
-                <input class="btn" type="button" value="9" onclick="escreverNaTela(9)">
+                <button class="btn" onclick="escreverNaTela(7)">7</button>
+                <button class="btn" onclick="escreverNaTela(8)">8</button>
+                <button class="btn" onclick="escreverNaTela(9)">9</button>
                 <br>
-                <input class="btn" type="button" value="0" onclick="escreverNaTela(0)">
+                <button class="btn" onclick="escreverNaTela(0)">0</button>
             </div>
 
             <button onclick="calcular()"><abbr title="Exibe o Resultado">Calcular</abbr></button>
