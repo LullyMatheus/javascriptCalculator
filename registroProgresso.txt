@@ -8,12 +8,12 @@ Funcionalidades para adicionar
 - Permitir que o usuário digite com seu teclado;
 - Permitir que o usuário apague apenas o último valor que digitou; ✅
 - Permitir que o usuário use o backspace na tela de resultado;
+- Fazer o cursor mudar quando estiver em cima do botão (cursor: pointer) ✅
 */
 
 /*
 Aparencia
 - Fonte da tela ✅
-- Personalizar botoes
-- Adicionar mais graça no fundo
+- Personalizar botoes ✅
 - Adicionar favicon (js)
 */
