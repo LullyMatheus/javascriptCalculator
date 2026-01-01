@@ -7,6 +7,26 @@ let resultadoPrevio = false;
 let resultadoGlobal = 0;
 let telaResultado = false; //para saber se ela esta na tela que exibe resposta
 let indiceAns=3;
+let vetorExpressao=[]
+
+function backspace(vetor){ //essa function escreve na tela o conteudo do vetor expressao
+    console.log('Backspace...')
+    vetor = vetorExpressao;
+    let expressao = window.document.getElementById('expressao');
+    expressao.innerText='';
+    let char = vetor[length-1]
+    char=toString(char)
+    console.log('O ultimo item é '+char)
+
+    if(['+','-','x','÷'].includes(char)){
+        ativarBotoes();
+    }
+
+    vetor.pop();
+    for(let i=0;i<vetor.length;i++){
+        expressao.innerText+=vetor[i]
+    }
+}
 
 function desativarBotoes() {
     btn1.disabled = true;
@@ -70,6 +90,9 @@ function escreverNaTela(a) {
         telaResultado=false;        
     }
     expressao.innerText += a
+    vetorExpressao.push(a)
+    console.log(vetorExpressao)
+    console.log(`O último indice é: ${vetorExpressao.length-1}`)
 }
 
 function zerar() {
@@ -81,6 +104,7 @@ function zerar() {
     resultadoPrevio = false;
     resultadoGlobal = 0;
     desativarBotoes();
+    vetorExpressao=[]
 }
 
 function calcular() {
