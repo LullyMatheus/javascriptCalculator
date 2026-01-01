@@ -52,6 +52,10 @@ function backspace(){ //essa function escreve na tela o conteudo do vetor expres
         telaResultado=false;
 
     }
+
+    if(expressao.innerText.length==0){
+        desativarBotoes();
+    }
 }
 
 function desativarBotoes() {
