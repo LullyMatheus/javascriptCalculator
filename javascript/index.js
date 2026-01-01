@@ -28,6 +28,11 @@ function backspace(){ //essa function escreve na tela o conteudo do vetor expres
     if(['+', '-', 'x', '÷'].includes(char)){
         ativarBotoes();
     }
+
+    if(telaResultado==true){
+        zerar();
+        telaResultado=false;
+    }
         
     console.log('O ultimo item é '+char)
     
