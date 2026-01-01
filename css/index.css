@@ -81,8 +81,12 @@ abbr {
     font: bold 25pt Courier;
     text-align: center;
     color: white;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: -20px;
+}
+
+h1{
+    margin-top: 20px;
 }
 
 .section {
@@ -101,6 +105,7 @@ abbr {
     padding: 2% 2% 1%;
     /* usar o padding aqui eh melhor do que heigth e width*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
+    margin-bottom: 0;
 
 
 }
@@ -108,4 +113,5 @@ abbr {
 .footer {
     text-align: center;
     color: white;
+    margin: 5px;
 }
