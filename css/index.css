@@ -98,8 +98,7 @@ abbr {
     background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
     border-radius: 20px;
     text-align: center;
-    font: normal 15pt Unageo;
-    padding: 3%;
+    padding: 2% 2% 1%;
     /* usar o padding aqui eh melhor do que heigth e width*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
 
@@ -107,7 +106,6 @@ abbr {
 }
 
 .footer {
-    font: normal 10pt Unageo;
     text-align: center;
     color: white;
 }
