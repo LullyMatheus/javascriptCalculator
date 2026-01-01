@@ -40,6 +40,13 @@ function backspace(){ //essa function escreve na tela o conteudo do vetor expres
         expressao.innerText+=vetorExpressao[i]
     }
     ultimoIndiceGeral--;
+
+    if(telaResultado==true){
+        let res = window.document.getElementById('res')
+        res.innerText='';
+        telaResultado=false;
+
+    }
 }
 
 function desativarBotoes() {
