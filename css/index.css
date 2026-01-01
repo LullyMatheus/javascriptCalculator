@@ -9,16 +9,6 @@ body {
     padding: 2%;
 }
 
-#obs {
-    font-size: x-small;
-    text-align: center;
-    color: rgb(71, 71, 71);
-    background-color: rgb(202, 224, 169);
-    margin-top: 5px;
-    border: 1px solid #0000004b;
-    border-radius: 6px;
-}
-
 p#obs{
     margin: 0;
 }
