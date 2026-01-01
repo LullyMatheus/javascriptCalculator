@@ -37,6 +37,17 @@ abbr {
     height: 30px;
     width: 35px;
     margin: 2px;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.btnCalcular{
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border-width: 1px;
+    cursor: pointer;
 }
 
 .operacao {
