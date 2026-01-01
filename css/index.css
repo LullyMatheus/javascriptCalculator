@@ -1,5 +1,8 @@
 body {
     background-color: rgb(75, 0, 122);
+    /*background-color: #A7AAE1;*/
+    /*background-color: #FD7979;*/
+    
 }
 
 .div-op {
@@ -58,11 +61,11 @@ abbr {
 
 
 .roboto-mono {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  margin-bottom: 8px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 8px;
 }
 
 .header {
@@ -70,6 +73,7 @@ abbr {
     text-align: center;
     color: white;
     margin-top: 40px;
+    margin-bottom: -20px;
 }
 
 .section {
@@ -82,7 +86,7 @@ abbr {
 }
 
 .minhaDiv {
-    background-color: white;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
     border-radius: 20px;
     text-align: center;
     font: normal 15pt Unageo;
