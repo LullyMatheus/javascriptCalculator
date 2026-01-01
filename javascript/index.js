@@ -86,8 +86,13 @@ function operar(a, b, sinal) {
             resultado = a * b;
             break;
         case '÷':
-            resultado = a / b;
-            break;
+            if(b==0){
+                resultado='Erro: divisão por zero.';
+                break;
+            } else{
+                resultado = a / b;
+                break;
+            }
         default:
             window.alert('Houve um erro. Tente Novamente')
             break;
