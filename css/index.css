@@ -10,8 +10,17 @@ body {
 }
 
 #obs {
+    font-size: x-small;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(71, 71, 71);
+    background-color: rgb(202, 224, 169);
+    margin-top: 5px;
+    border: 1px solid #0000004b;
+    border-radius: 6px;
+}
+
+p#obs{
+    margin: 0;
 }
 
 #conta {
@@ -41,7 +50,7 @@ abbr {
 }
 
 .operacao {
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
 }
 
