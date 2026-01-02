@@ -17,7 +17,7 @@ p#obs{
     background-color: rgb(202, 224, 169);
     font: normal 10pt Roboto;
     min-height: 90px;
-    border-radius: 10px;
+    border-radius: 13px;
     border: 2px solid #0000004b;
     margin-bottom: 0;
 }
