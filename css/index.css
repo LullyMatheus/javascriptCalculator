@@ -5,6 +5,11 @@ body {
     
 }
 
+#githublink{
+    text-decoration: none;
+    color: white;
+}
+
 .div-op {
     padding: 2%;
 }
