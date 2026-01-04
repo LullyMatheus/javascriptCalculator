@@ -299,3 +299,19 @@ document.addEventListener('keydown', function(event) {
             break;
     }
 });
+
+//Os demais EventListeners abaixo
+
+//ATENCAO: A sintaxe abaixo funciona apenas com arrow function (funcao anonima)
+btn1.addEventListener('click', () => operacao('+'));
+btn2.addEventListener('click', () => operacao('-'));
+btn3.addEventListener('click', () => operacao('x'));
+btn4.addEventListener('click', () => operacao('÷'));
+
+const btnBackspace = window.document.getElementById('btnBackSpace');
+const btnAC = window.document.getElementById('zerar');
+
+btnAC.addEventListener('click', zerar);
+btnBackspace.addEventListener('click', backspace);
+
+
