@@ -118,11 +118,11 @@ function operar(a, b, sinal) {
 }
 
 function escreverNaTela(a) {
+    ativarBotaoCalcular();
     let expressao = window.document.getElementById('expressao');
     let tamanho = (expressao.innerText).length
     if (tamanho == 0) {
         ativarBotoes();
-        ativarBotaoCalcular();
     }
 
     if (telaResultado == true) {
@@ -251,10 +251,8 @@ function calcular() {
             telaResultado = true;
 
         }
-
-
-
     }
+    
 }
 
 //O codigo abaixo permite que o usuario faca contas utilizando o seu teclado
@@ -310,8 +308,30 @@ btn4.addEventListener('click', () => operacao('÷'));
 
 const btnBackspace = window.document.getElementById('btnBackSpace');
 const btnAC = window.document.getElementById('zerar');
+const num1 = window.document.getElementsByName('number')[0];
+const num2 = window.document.getElementsByName('number')[1];
+const num3 = window.document.getElementsByName('number')[2];
+const num4 = window.document.getElementsByName('number')[3];
+const num5 = window.document.getElementsByName('number')[4];
+const num6 = window.document.getElementsByName('number')[5];
+const num7 = window.document.getElementsByName('number')[6];
+const num8 = window.document.getElementsByName('number')[7];
+const num9 = window.document.getElementsByName('number')[8];
+const num0 = window.document.getElementsByName('number')[9];
 
 btnAC.addEventListener('click', zerar);
 btnBackspace.addEventListener('click', backspace);
+num1.addEventListener('click', () => escreverNaTela(1) )
+num2.addEventListener('click', () => escreverNaTela(2) )
+num3.addEventListener('click', () => escreverNaTela(3) )
+num4.addEventListener('click', () => escreverNaTela(4) )
+num5.addEventListener('click', () => escreverNaTela(5) )
+num6.addEventListener('click', () => escreverNaTela(6) )
+num7.addEventListener('click', () => escreverNaTela(7) )
+num8.addEventListener('click', () => escreverNaTela(8) )
+num9.addEventListener('click', () => escreverNaTela(9) )
+num0.addEventListener('click', () => escreverNaTela(0) )
+btnCalcular.addEventListener('click', calcular)
+
 
 
