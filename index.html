@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="imagens/favicon.svg">
 </head>
 
-<body onload="desativarBotoes()">
+<body onload="desativarBotoes(); desativarBotaoCalcular()">
 
     <header class="header">
         <h1 class="fonte-nabla">Javascript Calculator</h1>
@@ -56,10 +56,7 @@
                 <button class="btn roboto-mono" onclick="escreverNaTela(0)">0</button>
             </div>
 
-            <button class="btnCalcular roboto-mono" onclick="calcular()"><abbr title="Exibe o Resultado">Calcular</abbr></button>
-            
-
-            
+            <button class="btnCalcular roboto-mono" id="btnCalcular" onclick="calcular()"><abbr title="Exibe o Resultado">Calcular</abbr></button>
 
         </div>
     </section>

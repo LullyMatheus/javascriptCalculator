@@ -5,9 +5,9 @@ Funcionalidades para adicionar
 - Não permitir a divisão por zero; ✅
 - Permitir que o usuário realize várias contas em sequência ✅;
 - Após calcular, permitir digitar um novo numero ✅;
-- Permitir que o usuário digite com seu teclado;
+- Permitir que o usuário digite com seu teclado; ✅
 - Permitir que o usuário apague apenas o último valor que digitou; ✅
-- Permitir que o usuário use o backspace na tela de resultado;
+- Permitir que o usuário use o backspace na tela de resultado; ✅
 - Fazer o cursor mudar quando estiver em cima do botão (cursor: pointer) ✅
 */
 
@@ -15,5 +15,5 @@ Funcionalidades para adicionar
 Aparencia
 - Fonte da tela ✅
 - Personalizar botoes ✅
-- Adicionar favicon (js)
+- Adicionar favicon (js) ✅
 */
