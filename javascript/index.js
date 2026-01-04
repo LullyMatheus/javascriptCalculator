@@ -15,7 +15,7 @@ let vetorExpressao = []
 let ultimoIndiceGeral;
 
 function backspace() { //essa function escreve na tela o conteudo do vetor expressao
-    console.log('Backspace...')
+    //console.log('Backspace...')
     let expressao = window.document.getElementById('expressao');
 
     /*
@@ -38,7 +38,7 @@ function backspace() { //essa function escreve na tela o conteudo do vetor expre
         telaResultado = false;
     }
 
-    console.log('O ultimo item é ' + char)
+    //console.log('O ultimo item é ' + char)
 
     vetorExpressao.pop();
 
@@ -141,8 +141,8 @@ function escreverNaTela(a) {
 
     expressao.innerText += a
     vetorExpressao.push(a)
-    console.log(vetorExpressao)
-    console.log(`O último indice é: ${vetorExpressao.length - 1}`)
+    //console.log(vetorExpressao)
+    //console.log(`O último indice é: ${vetorExpressao.length - 1}`)
     ultimoIndiceGeral = vetorExpressao.length - 1;
 }
 
@@ -166,7 +166,7 @@ function calcular() {
         let segundoNumero = '';
         let indiceSinal = '';
 
-        console.log('Analise dos números:')
+        //console.log('Analise dos números:')
 
         let expressao = window.document.getElementById('expressao');
         expressao = expressao.innerText
@@ -178,7 +178,7 @@ function calcular() {
             if (!['+', '-', 'x', '÷'].includes(char)) {
                 primeiroNumero += expressao.at(i);
             } else {
-                console.log(`Há símbolos em ${i}! Valor = '${expressao.at(i)}'`)
+                //console.log(`Há símbolos em ${i}! Valor = '${expressao.at(i)}'`)
                 indiceSinal = i;
                 existeSinal = true;
                 break;
@@ -194,7 +194,7 @@ function calcular() {
                 zerar();
             } else {
                 primeiroNumero = Number(primeiroNumero)
-                console.log('O primeiro número é: ' + primeiroNumero)
+                //console.log('O primeiro número é: ' + primeiroNumero)
                 indiceSinal = Number(indiceSinal)
 
                 for (let j = indiceSinal + 1; j < expressao.length; j++) {
@@ -202,11 +202,11 @@ function calcular() {
                 }
 
                 segundoNumero = Number(segundoNumero)
-                console.log('O segundo numero é ' + segundoNumero)
+                //console.log('O segundo numero é ' + segundoNumero)
 
                 let resultado = operar(primeiroNumero, segundoNumero, expressao.at(indiceSinal))
 
-                console.log('Resultado: ' + resultado)
+                //console.log('Resultado: ' + resultado)
                 let res = window.document.getElementById('res')
                 res.innerText = (`R: ${resultado}`)
                 resultadoPrevio = true;
@@ -227,7 +227,7 @@ function calcular() {
         let primeiroNumero = resultadoGlobal;
         let segundoNumero = '';
 
-        console.log('O valor de expressao.length é ' + expressao.length)
+        //console.log('O valor de expressao.length é ' + expressao.length)
 
         if (expressao.length < 5) {
             window.alert('Digite o restante da expressão!')
@@ -237,12 +237,12 @@ function calcular() {
             }
 
             segundoNumero = Number(segundoNumero)
-            console.log('O novo número é: ' + segundoNumero)
-            console.log('Símbolo: ' + expressao.at(indiceAns))
+            //console.log('O novo número é: ' + segundoNumero)
+            //console.log('Símbolo: ' + expressao.at(indiceAns))
 
             let resultado = operar(primeiroNumero, segundoNumero, expressao.at(indiceAns))
 
-            console.log('Resultado: ' + resultado)
+            //console.log('Resultado: ' + resultado)
             let res = window.document.getElementById('res')
             res.innerText = (`R: ${resultado}`)
             resultadoPrevio = true;
